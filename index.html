@@ -308,33 +308,69 @@ audio, canvas, progress, video {
 	opacity: 0;
 }
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
 
 
-</script><tw-passagedata pid="1" name="Online Mapping" tags="Begin" position="563,0">&lt;h2&gt;Online Mapping Game&lt;/h2&gt;
 
-Hello and welcome to the online mapping game, where the goal is to help you discover how to put a map online! Before we start, let&#39;s first pick your character for the game. This is based on which map-based tasked that you&#39;d like to complete and what type of information you&#39;re bringing to the game. As you progress through the map-based tasks, you also have the option of upgrading their character to complete more complex tasks. Let&#39;s introduce the characters
+</script><tw-passagedata pid="1" name="Online Mapping" tags="Begin" position="563,0">&lt;h2&gt;Online Mapping Game&lt;/h2&gt;
+Hello and welcome to the online mapping game, where the goal is to help you discover how to put a map online! Before we start, let&#39;s first pick your character for the game. This is based on which map-based tasked that you&#39;d like to complete and what type of information you&#39;re bringing to the game. As you progress through the map-based tasks, you also have the option of upgrading their character to complete more complex tasks. Let&#39;s introduce the characters!
+
 
 [img[images/boy.png]]
 This is Tommy Thompson, an individual that doesn&#39;t know much about maps. Tommy is looking to use a map, but he doesn&#39;t necessarily have any map with him or any form of data that will help create a map. Tommy is essentially starting from scratch. With this character, users would [[like to use a map, but I have nothing|NoMapsData]]
-
 [img[images/Mercator.png]]
 This is Gerard Mercator is a Flemish cartographer in the 16th century whose most important innovation was a map. Mercator is well known for the Mercator projection, on which parallels and meridians are rendered as straight lines spaced so as to produce at any point an accurate ratio of latitude to longitude. With this character, users [[have a digital map that I&#39;d like to put online|OnlineMap]]
-
 [img[images/Tomlinson.png]]
-This is Roger Tomlinson, an english-born Canadian geographer who in 1963 began developing in Ottawa, Canada what would eventually become the first true Geographic Information System (GIS) in order to assist the Canadian government with monitoring and managing the country’s natural resources. Tomlinson is known as the &quot;Father of GIS&quot;. With this character, users [[have data in a spreadsheet that they&#39;d like to map|DataMap]]
-
-
-
-
-
-</tw-passagedata>
-<tw-passagedata pid="2" name="geographic location?" tags="" position="1004,281">A geographic location refers to a position on the earth. This can be typically seen in a multitude of ways:
+This is Roger Tomlinson, an english-born Canadian geographer who in 1963 began developing in Ottawa, Canada what would eventually become the first true Geographic Information System (GIS) in order to assist the Canadian government with monitoring and managing the country’s natural resources. Tomlinson is known as the &quot;Father of GIS&quot;. With this character, users [[have data in a spreadsheet that they&#39;d like to map|DataMap]]</tw-passagedata>
+<tw-passagedata pid="2" name="geographic location?" tags="" position="1007,284">&lt;&lt;if $addClean is true and $addTable is true and $addGeo is true&gt;&gt; 
+Congratulations!! you&#39;ve met all of the criteria to move ahead. You&#39;re data is all cleaned-up, is formatted in a spreadsheet and has a geographic location. Now, how is your geographic location represented?
 
 1. [[Latitude/Longitude|Coordinates]] coordinate show an exact location and are typically easiest to work with.
 2. [[City, State/Province, Country, Postal Code, Street Address|GeographicElements]] indicate the approximate position of a point.
+
+&lt;&lt;elseif $addClean is true and $addTable is false and $addGeo is false&gt;&gt; Sorry, your data needs to be formatted in a spreadsheet and needs geographic elements. For help with:
+
+1. Getting your data in a &lt;a href=&quot;http://programminghistorian.org/lessons/understanding-regular-expressions&quot; target=&quot;_blank&quot;&gt;spreadhseet format using regular expressions&lt;/a&gt;
+
+2. A geographic location can be indicated in a multitude of ways; city, province/state or country, latitude or longitude or a street address.
+
+[[Please Try Again|DataMap]]
+
+&lt;&lt;elseif $addClean is true and $addTable is true and $addGeo is false&gt;&gt; Sorry, your data needs geographic elements. A geographic location can be indicated in a multitude of ways; city, province/state or country, latitude or longitude or a street address.
+
+[[Please Try Again|DataMap]]
+
+&lt;&lt;elseif $addClean is false and $addTable is true and $addGeo is false&gt;&gt; Sorry, your data appears to be dirty and doesn&#39;t include geographic elements. For help with:
+
+1. Getting your &lt;a href=&quot;http://programminghistorian.org/lessons/cleaning-data-with-openrefine&quot; target=&quot;_blank&quot;&gt;data cleaned-up using OpenRefine&lt;/a&gt;
+
+2. A geographic location can be indicated in a multitude of ways; city, province/state or country, latitude or longitude or a street address.
+
+[[Please Try Again|DataMap]]
+
+&lt;&lt;elseif $addClean is false and $addTable is true and $addGeo is true&gt;&gt; Sorry, your data appears to be dirty. Look at getting your &lt;a href=&quot;http://programminghistorian.org/lessons/cleaning-data-with-openrefine&quot; target=&quot;_blank&quot;&gt;data cleaned-up using OpenRefine&lt;/a&gt;
+
+[[Please Try Again|DataMap]]
+
+&lt;&lt;elseif $addClean is true and $addTable is false and $addGeo is true&gt;&gt; Sorry, your data needs to be formatted in a spreadsheet. Please see getting your data in a &lt;a href=&quot;http://programminghistorian.org/lessons/understanding-regular-expressions&quot; target=&quot;_blank&quot;&gt;spreadhseet format using regular expressions&lt;/a&gt;
+
+[[Please Try Again|DataMap]]
+
+&lt;&lt;elseif $addClean is false and $addTable is false and $addGeo is true&gt;&gt; Sorry, your data needs to be formatted in a spreadsheet and appears to be dirty. For help with:
+
+1. Getting your data in a &lt;a href=&quot;http://programminghistorian.org/lessons/understanding-regular-expressions&quot; target=&quot;_blank&quot;&gt;spreadhseet format using regular expressions&lt;/a&gt;
+
+2. Getting your &lt;a href=&quot;http://programminghistorian.org/lessons/cleaning-data-with-openrefine&quot; target=&quot;_blank&quot;&gt;data cleaned-up using OpenRefine&lt;/a&gt;
+[[Please Try Again|DataMap]]
+
+&lt;&lt;endif&gt;&gt;\
+
+
+
+
 
 
 
@@ -345,22 +381,27 @@ This is Roger Tomlinson, an english-born Canadian geographer who in 1963 began d
 [[I&#39;d like to find an existing Map|FindMaps]]
 [[I&#39;d like to find data to create a map|FindData]]</tw-passagedata>
 <tw-passagedata pid="4" name="OnlineMap" tags="" position="570,279">[img[images/Mercator.png]]
-
 Thank you for choosing the Gerard Mercator character. Gerard Mercator is a Flemish cartographer in the 16th century whose most important innovation was a map. The tasks included in this stage assumes that you either have a map or have found a map. The following are options for your next map-based tasks.
 
 [[Georeference the map (overlay over real world locations)|GeoreferenceMaps]]
 [[Put the map(s) online|UploadMaps]]</tw-passagedata>
-<tw-passagedata pid="5" name="DataMap" tags="" position="998,152">[img[images/Tomlinson.png]]
+<tw-passagedata pid="5" name="DataMap" tags="" position="994,151">[img[images/Tomlinson.png]]
+Thank you for choosing the Roger Tomlinson character. Roger Tomlinson was an english-born Canadian geographer who is considered by most in the field to be the &quot;father of GIS&quot;. This is the most advanced character of the game as we&#39;ll be mapping some of your data. To start mapping data, we&#39;ll need some form of geographic location in your data. A geographic location can be indicated in a multitude of ways; city, province/state or country, latitude or longitude or a street address. As there are multitude of online mapping applications that deal with these data, this tutorial will give you a step by step instructions on how to work with a specific mapping tool, while illustrating its strengths and weakenesses. Before we start anything, let&#39;s go ahead and make sure that you have some of the basics in your data. 
 
-Thank you for choosing the Roger Tomlinson character. Roger Tomlinson was an english-born Canadian geographer who is considered by most in the field to be the &quot;father of GIS&quot;. This is the most advanced character of the game as we&#39;ll be mapping some of your data. To start mapping data, we&#39;ll need some form of geographic location in your data. A geographic location can be indicated in a multitude of ways; city, province/state or country, latitude or longitude or a street address. As there are multitude of online mapping applications that deal with these data, this tutorial will give you a step by step instructions on how to work with specific mapping tools, while illustrating its strengths and weakenesses. Before we start anything, let&#39;s go ahead and make sure that you have some of the basics in your data. 
+&lt;&lt;set $backpack to []&gt;&gt;
 
-1. Is your cleaned-up? Have you removed duplicates, empty rows or columns? You may want to look at the OpenRefine tutorial to help you clean up some of your data.
+1. &lt;&lt;checkbox &quot;$addClean&quot; false true false&gt;&gt;Is your cleaned-up? Have you removed duplicates, empty rows or columns? 
 
-2. Is your data in a spreadsheet format (xls, csv)? For help with getting your data in a spreadhseet format, feel free to see other tutorials such as using regular expressions to help you get your data in a spreadsheet format.
+2. &lt;&lt;checkbox &quot;$addTable&quot; false true false&gt;&gt;Is your data in a spreadsheet format (xls, csv)? 
 
-4. Does your data include a [[geographic location?]]
-</tw-passagedata>
-<tw-passagedata pid="6" name="FindMaps" tags="" position="347.0001,280">There are various ways to find maps. Begin by searching the following websites for digital maps.
+3. &lt;&lt;checkbox &quot;$addGeo&quot; false true false&gt;&gt;Does your data include a geographic location? 
+
+&lt;&lt;button [[geographic location?]]&gt;&gt;
+	&lt;&lt;if $addClean&gt;&gt;&lt;&lt;set $backpack.push(&quot;Clean&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $addTable&gt;&gt;&lt;&lt;set $backpack.push(&quot;Table&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $addGeo&gt;&gt;&lt;&lt;set $backpack.push(&quot;Geo&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="6" name="FindMaps" tags="" position="347,280">There are various ways to find maps. Begin by searching the following websites for digital maps.
 
 1. &lt;a href=&quot;http://www.bac-lac.gc.ca/eng/discover/maps-charts-plans/pages/maps-charts-architectural-plans.aspx&quot; target=&quot;_blank&quot;&gt;Library and Archives Canada&lt;/a&gt;
 2. &lt;a href=&quot;http://www.oldmapsonline.org/&quot; target=&quot;_blank&quot;&gt;VOld Maps Online&lt;/a&gt;
@@ -369,11 +410,10 @@ Thank you for choosing the Roger Tomlinson character. Roger Tomlinson was an eng
 5. &lt;a href=&quot;http://digitalcollections.nypl.org/divisions/lionel-pincus-and-princess-firyal-map-division&quot; target=&quot;_blank&quot;&gt;New york Public Library&lt;/a&gt;  
 6. Paper Map that you intend on scanning. A scan be done with a large format scanner or with a digital camera. Ensure that you check &lt;a href=&quot;http://www.acmla-acacc.ca/dev/carto_copy.php&quot; target=&quot;_blank&quot;&gt;the copyright on the map (draft guidelines to follow).&lt;/a&gt;
 
-Once you&#39;ve searched through these database, download the imagery or map that you&#39;d like and voila. If you&#39;re more than happy with this, Congratulations, you&#39;ve [[completed the Tommy Thompson stage|TommyEnd]]!
+Once you&#39;ve searched through these database, download the imagery or map that you&#39;d like and voila. [[Are you more than happy with ending here?|TommyEnd]]!
+ 
 
-If you&#39;d like to keep going,[[upgrade your character to georeference|OnlineMap]] (overlay the map in the correct position on the world) this map with the use of Gerard Mercator.  
 
-[img[images/Mercator.png]]
 </tw-passagedata>
 <tw-passagedata pid="7" name="FindData" tags="" position="671,150">There are lots of places to find data to create maps from. Try the following:
 
@@ -401,15 +441,13 @@ There are a few ways in which you can put a map online:
 [[Static Map]], where you upload a map online only.
 [[Interactive Map]], where the uploaded map is more interactive, allowing the user to zoom and pan.</tw-passagedata>
 <tw-passagedata pid="10" name="GeoreferenceGE" tags="" position="376,728">&lt;h3&gt;Georeferencing with Google Earth&lt;/h3&gt;
-
 [img[images/GE3.png]]
-
 Using the imagery of Google Earth as a backdrop, you can overlay photos, aerial views or map images to complement the existing earth view. In this tutorial, you&#39;ll be adding a scanned historical maps to Google Earth. Within Google Earth, you can upload a digital copy of a historical map. This could be a map that has been scanned, or an image obtained that is
 already in a digital format.
 
 We&#39;ll use this method if you&#39;d like to have a georeferenced image created in a desktop software or if you&#39;re image is still in copyright and you don&#39;t want to make the image public.
 
-Google Earth is a desktop software available for both Windows and Apple. You can &lt;a href=&quot;http://earth.google.com/&quot; target=&quot;_blank&quot;&gt;ownload Google Earth here.&lt;/a&gt;
+Google Earth is a desktop software available for both Windows and Apple. You can &lt;a href=&quot;http://earth.google.com/&quot; target=&quot;_blank&quot;&gt;Download Google Earth here.&lt;/a&gt;
 
 1. Once you have Google Earth downloaded and installed, open the software and turn off all layers from the table of the contents on the left. 
 
@@ -448,8 +486,6 @@ Mapwarper is an open source map geo-rectification, warping and georeferencing ap
 Before starting the georeferencing, ensure that you&#39;ve checked the &lt;a href=&quot;http://www.acmla-acacc.ca/dev/carto_copy.php&quot; target=&quot;_blank&quot;&gt;copyright (draft guidelines) on the map&lt;/a&gt;. If your map is still in copyright, please follow [[GeoreferenceGIS]] or [[GeoreferenceGE]] as the final georeferenced map doesn&#39;t doesn&#39;t need to be made available to the general public.
 
 If you&#39;re map is out of copyright, please continue with the following steps of uploading the image.
-
-&lt;a href=&quot;http://www.w3schools.com/&quot; target=&quot;_blank&quot;&gt;Visit W3Schools!&lt;/a&gt;
 
 1. Begin by going to the &lt;a href=&quot;http://mapwarper.net/&quot; target=&quot;_blank&quot;&gt;MapWarper&lt;/a&gt;website to create an account, then login.&lt;/p&gt;
 
@@ -567,14 +603,16 @@ If you&#39;re more than happy with this, Congratulations, you&#39;ve [[completed
 </tw-passagedata>
 <tw-passagedata pid="14" name="Static Map" tags="" position="717,456">A static map is a map that has been put online. Before doing this, consult the &lt;a href=&quot;http://www.acmla-acacc.ca/dev/carto_copy.php&quot; target=&quot;_blank&quot;&gt; draft copyright guidelines&lt;/a&gt; to ensure that you&#39;re following copyright laws when reproducing cartographic materials.
 
-&lt;a href=&quot;http://www.w3schools.com/&quot; target=&quot;_blank&quot;&gt;Visit W3Schools!&lt;/a&gt;
-
 Putting up a static map online is like putting up any particular image where you need to upload your map to a server. The following are a few image loading servers that may be used.
 
 1.&lt;a href=&quot;https://www.flickr.com/&quot; target=&quot;_blank&quot;&gt;Flickr&lt;/a&gt;
+
 2. &lt;a href=&quot;https://photos.google.com/&quot; target=&quot;_blank&quot;&gt;Google Photos (formerly Picassa)&lt;/a&gt;
-3. &lt;a href=&quot;https://www.google.ca/drive/&quot; target=&quot;_blank&quot;&gt;Google Drive/a&gt;
+
+3. &lt;a href=&quot;https://www.google.ca/drive/&quot; target=&quot;_blank&quot;&gt;Google Drive&lt;/a&gt;
+
 4. &lt;a href=&quot;http://s5.photobucket.com/&quot; target=&quot;_blank&quot;&gt;Photo Bucket&lt;/a&gt;
+
 5. &lt;a href=&quot;https://www.dropbox.com/&quot; target=&quot;_blank&quot;&gt;Dropbox&lt;/a&gt;
 
 Please select one that meets your needs and upload your map to the server. Once this is done, you should be given a link that you&#39;ll be able to use to access your map.
@@ -704,12 +742,17 @@ https://www.gislounge.com/how-to-geocode-addresses-using-qgis/
 Here, I&#39;ll also add the method of downloading a street file to geocode using QGIS.
 
 Once we&#39;re done and still want to display our lat/long data, go to [[CartoDB]]</tw-passagedata>
-<tw-passagedata pid="21" name="TommyEnd" tags="" position="151,279">Congratulations!
-You&#39;ve complete the Tommy Thompson stage!</tw-passagedata>
-<tw-passagedata pid="22" name="MercatorEnd" tags="" position="757,611">Congratulations!
-You&#39;ve complete the Gerard Mercator stage!</tw-passagedata>
+<tw-passagedata pid="21" name="TommyEnd" tags="" position="196,457">&lt;&lt;if visited(&quot;FindMaps&quot;)&gt;&gt;
+Congratulations!
+You&#39;ve complete the Tommy Thompson stage! You&#39;ve earned 10 points! If you&#39;d like to get more points, try [[putting a digital map online|OnlineMap]]
+&lt;&lt;endif&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="22" name="MercatorEnd" tags="" position="759,705">Congratulations!
+You&#39;ve complete the Gerard Mercator stage! You&#39;ve earned 20 points! If you&#39;d like to get more points, try [[using data to make a digital map online|DataMap]]</tw-passagedata>
 <tw-passagedata pid="23" name="TomlinsonEnd" tags="" position="1044,903">Congratulations!
-You&#39;ve complete the Roger Tomlinso stage!</tw-passagedata>
+You&#39;ve complete the Roger Tomlinso stage!
+You&#39;ve earned 30 points!
+
+This is the end of the game now!</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
