@@ -325,7 +325,7 @@ This is Tommy Thompson, an individual that doesn&#39;t know much about maps. Tom
 This is Gerard Mercator is a Flemish cartographer in the 16th century whose most important innovation was a map. Mercator is well known for the Mercator projection, on which parallels and meridians are rendered as straight lines spaced so as to produce at any point an accurate ratio of latitude to longitude. With this character, users [[have a digital map that I&#39;d like to put online|OnlineMap]]
 [img[images/Tomlinson.png]]
 This is Roger Tomlinson, an english-born Canadian geographer who in 1963 began developing in Ottawa, Canada what would eventually become the first true Geographic Information System (GIS) in order to assist the Canadian government with monitoring and managing the country’s natural resources. Tomlinson is known as the &quot;Father of GIS&quot;. With this character, users [[have data in a spreadsheet that they&#39;d like to map|DataMap]]</tw-passagedata>
-<tw-passagedata pid="2" name="geographic location?" tags="" position="1007,284">&lt;&lt;if $addClean is true and $addTable is true and $addGeo is true&gt;&gt; 
+<tw-passagedata pid="2" name="geographic location?" tags="" position="1006,284">&lt;&lt;if $addClean is true and $addTable is true and $addGeo is true&gt;&gt; 
 Congratulations!! you&#39;ve met all of the criteria to move ahead. You&#39;re data is all cleaned-up, is formatted in a spreadsheet and has a geographic location. Now, how is your geographic location represented?
 
 1. [[Latitude/Longitude|Coordinates]] coordinate show an exact location and are typically easiest to work with.
@@ -386,7 +386,7 @@ Thank you for choosing the Gerard Mercator character. Gerard Mercator is a Flemi
 [[Georeference the map (overlay over real world locations)|GeoreferenceMaps]]
 [[Put the map(s) online|UploadMaps]]</tw-passagedata>
 <tw-passagedata pid="5" name="DataMap" tags="" position="994,151">[img[images/Tomlinson.png]]
-Thank you for choosing the Roger Tomlinson character. Roger Tomlinson was an english-born Canadian geographer who is considered by most in the field to be the &quot;father of GIS&quot;. This is the most advanced character of the game as we&#39;ll be mapping some of your data. To start mapping data, we&#39;ll need some form of geographic location in your data. A geographic location can be indicated in a multitude of ways; city, province/state or country, latitude or longitude or a street address. As there are multitude of online mapping applications that deal with these data, this tutorial will give you a step by step instructions on how to work with a specific mapping tool, while illustrating its strengths and weakenesses. Before we start anything, let&#39;s go ahead and make sure that you have some of the basics in your data. 
+Thank you for choosing the Roger Tomlinson character. Roger Tomlinson was an english-born Canadian geographer who is considered by most in the field to be the &quot;father of GIS&quot;. This is the most advanced character of the game as we&#39;ll be mapping some of your data. To start mapping data, we&#39;ll need some form of geographic location in your data. A geographic location can be indicated in a multitude of ways; city, province/state or country, latitude or longitude or a street address. As there are multitude of online mapping applications that deal with these data, this tutorial will give you a step by step instructions on how to work with a specific mapping tool, while illustrating its strengths and weakenesses. Before we start anything, make sure that you&#39;ve completed the following tasks before moving forward. If you don&#39;t select all 3 options, you&#39;ll be asked to complete them.
 
 &lt;&lt;set $backpack to []&gt;&gt;
 
@@ -509,10 +509,13 @@ a. Ensure that your points are accurate. Use the zoom tool to be as precise as p
 b. Use more points. 
 c. Ensure that your points are dispersed on the map. 
 
-9. The MapWarper export tab offers many ways to use your newly georectified map. Users can save an image file, google earth file or a wms.
+9. The MapWarper export tab offers many ways to use your newly georectified map. Users can save an image file, google earth file, Wms Url or Tiles (Google/OSM scheme).
 [img[images/MW5.png]]
 
-[[Are you more than happy with ending here?|MercatorEnd]]!</tw-passagedata>
+
+[[Would you like view this in CartoDB?|CartoDB]]
+[[Are you more than happy with ending here?|MercatorEnd]]!
+</tw-passagedata>
 <tw-passagedata pid="12" name="GeoreferenceGIS" tags="" position="601,809">&lt;h3&gt;Georeferencing with QGIS&lt;/h3&gt;
 QGIS is an open source Geographic Information System (GIS) which allows users to create, manipulate and display geographic data. Click here to &lt;a href=&quot;http://www.qgis.org/en/site/&quot; target=&quot;_blank&quot;&gt;download the latest QGIS on either Windows or Apple&lt;/a&gt; 
 
@@ -553,55 +556,7 @@ Once you&#39;ve filled in the information, click on Ok.
 [img[images/QGIS7.png]]
 
 [[Are you more than happy with ending here?|MercatorEnd]]!</tw-passagedata>
-<tw-passagedata pid="13" name="DigitizeMap" tags="" position="316,912">Let&#39;s go ahead and digitize some features on Google Earth.
-
-&lt;h4&gt;Digitizing features from a georeferenced map&lt;/h4&gt;
-&lt;p&gt;You can create custom features and store them in the folder that was&amp;nbsp;previously created. The mapping tools at the top of the viewer offer custom feature creation such as points (placemark), lines (path) &amp;amp; polygons.&amp;nbsp;&lt;/p&gt;
-&lt;h5&gt;Adding a path or polygon&lt;/h5&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;To add a line, click the &lt;em&gt;Add Path&lt;/em&gt;&amp;nbsp;tool. The New Path dialogue box appears and the cursor has changed to a path drawing tool.&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot;Buttons for adding placemarks, paths, and polygons are found in the menu bar.&quot; src=&quot;./Georeferencing and digitizing scanned maps or aerial images in Google Earth _ MacOdrum Library_files/GeorefDigitizeGE_img05.png&quot; style=&quot;width: 432px; height: 109px;&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Click along the path on the imagerey to create a line (as if you are creating the dots for a connect-the-dots puzzle), double-clicking when it is complete.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Enter a name and description in the respective fields in the dialogue box.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;To&amp;nbsp;change the colour, select the &lt;em&gt;Style, Color&lt;/em&gt;&amp;nbsp;tab, click the Color box, and select a new colour. Click OK.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The width of the line can also be changed at this point by entering a new line thickness.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When satisfied with your changes, click OK to return to the map viewer. **You can always adjust the properties by right-clicking the path name in the table of contents and selecting Properties from the menu.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;To add a polygon shape, click the polygon drawing tool then click the corners of the polygon in succession around the edges, double-clicking to finish the shape.&amp;nbsp;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Again, colour and line thickness may be customized as well as the fill colour, and a name and description should be added in the New Polygon dialogue box.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot; &quot; src=&quot;./Georeferencing and digitizing scanned maps or aerial images in Google Earth _ MacOdrum Library_files/GeorefDigitizeGE_img06.png&quot; style=&quot;width: 435px; height: 433px;&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Like paths and polygons, a point&amp;nbsp;(called Placemarks in Google Earth) can be added and the&amp;nbsp;symbol style, size,&amp;nbsp;and colour&amp;nbsp;customized.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4&gt;Sharing your work&lt;/h4&gt;
-&lt;p&gt;Any features or layers that were added to your custom folder can be saved in KML or KMZ (zipped KML) format (native to Google) and shared with the world.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;To create a KMZ file, right-click on the folder you created earlier and select &lt;em&gt;Save Place As...&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Give the file an appropriate name and click &lt;em&gt;Save&lt;/em&gt;. This file can be sent via email as an attachment, added to a website as a download link, or saved locally for future reference.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;To view a KMZ or KML file, run Google Earth and select &lt;em&gt;File &amp;gt; Open&lt;/em&gt;. Navigate to the file of interest and open it. The layers will appear under &lt;em&gt;Places &amp;gt; Temporary Places&lt;/em&gt;.&lt;/p&gt;
-</tw-passagedata>
-<tw-passagedata pid="14" name="Static Map" tags="" position="717,456">A static map is a map that has been put online. Before doing this, consult the &lt;a href=&quot;http://www.acmla-acacc.ca/dev/carto_copy.php&quot; target=&quot;_blank&quot;&gt; draft copyright guidelines&lt;/a&gt; to ensure that you&#39;re following copyright laws when reproducing cartographic materials.
+<tw-passagedata pid="13" name="Static Map" tags="" position="717,456">A static map is a map that has been put online. Before doing this, consult the &lt;a href=&quot;http://www.acmla-acacc.ca/dev/carto_copy.php&quot; target=&quot;_blank&quot;&gt; draft copyright guidelines&lt;/a&gt; to ensure that you&#39;re following copyright laws when reproducing cartographic materials.
 
 Putting up a static map online is like putting up any particular image where you need to upload your map to a server. The following are a few image loading servers that may be used.
 
@@ -621,7 +576,7 @@ If you&#39;d also like to [[Georeference the map (overlay over real world locati
 
 [[Are you more than happy with ending here?|MercatorEnd]]!
 </tw-passagedata>
-<tw-passagedata pid="15" name="Interactive Map" tags="" position="846,456">In terms of interactive map, we&#39;re essentially allowing users to zoom in, zoom out and pan around the image that we just scanned or used. One of the ultimate tools for doing this is with zoomify. 
+<tw-passagedata pid="14" name="Interactive Map" tags="" position="846,456">In terms of interactive map, we&#39;re essentially allowing users to zoom in, zoom out and pan around the image that we just scanned or used. One of the ultimate tools for doing this is with zoomify. 
 
 1. &lt;a href=&quot;https://www.brocku.ca/maplibrary/Instruction/ZoomifyURL/ZoomifyURL.pdf&quot; target=&quot;_blank&quot;&gt;Zoomify Tutorial from Brock University&lt;/a&gt; 
 Keep in mind that zoomify has evolved since this was last writen by the fine folks at Brock University. Zoomify now charges a nominal fee for access to their new &lt;a href=&quot;http://www.zoomify.com/express.htm&quot; target=&quot;_blank&quot;&gt;zoomify express tool&lt;/a&gt;
@@ -631,7 +586,7 @@ Keep in mind that zoomify has evolved since this was last writen by the fine fol
 Please select one method that meets your needs and upload your map to the server. Once this is done, you should be given a link that you&#39;ll be able to use to access your interactive map.
 
 [[Are you more than happy with ending here?|MercatorEnd]]!</tw-passagedata>
-<tw-passagedata pid="16" name="Coordinates" tags="" position="1200,456">Having Latitude and Longitude coordinates are ideal for mapping your own data. Ensure that you&#39;re coordinates are in WGS84, which is a coordinate system that is used by Google Maps, Bing Maps, OpenStreetMap and most online interactive mapping websites. An example of coordinates in this space look like this for the Ottawa area: -75.75864, 45.76749. The number of digits after the period defines the precision of the coordinates and can be more or less than the example that we&#39;ve given. -75.75865 is west of the meridian (0 degrees) where as 45.76749 is north of the equator.
+<tw-passagedata pid="15" name="Coordinates" tags="" position="1200,457">Having Latitude and Longitude coordinates are ideal for mapping your own data. Ensure that you&#39;re coordinates are in WGS84, which is a coordinate system that is used by Google Maps, Bing Maps, OpenStreetMap and most online interactive mapping websites. An example of coordinates in this space look like this for the Ottawa area: -75.75864, 45.76749. The number of digits after the period defines the precision of the coordinates and can be more or less than the example that we&#39;ve given. -75.75865 is west of the meridian (0 degrees) where as 45.76749 is north of the equator.
 
 If you&#39;re data looks good, proceed to map your point data using [[CartoDB]]
 
@@ -640,7 +595,7 @@ If the numbers that you have are different, you&#39;re probably in a different c
 If you don&#39;t have latitude and longitude coordinates in your spreadsheet, you&#39;ll have to extract them from other [[geographic indicators|GeographicElements]]
 
 </tw-passagedata>
-<tw-passagedata pid="17" name="GeographicElements" tags="" position="1017,457">You&#39;ve got City, State/Province, Country, Postal Code or Street Address as your input data. To map this type of geographic data, we&#39;ll have to geocode your data and extract the latitude and longitude information and add it to your data. while it&#39;s true that some applications will directly and automatically geocode your city, country or postal code data, it is rare to find a free tool that will geocode limitless amount of street address information. Most will only do a limited number of street addresses.
+<tw-passagedata pid="16" name="GeographicElements" tags="" position="1017,457">You&#39;ve got City, State/Province, Country, Postal Code or Street Address as your input data. To map this type of geographic data, we&#39;ll have to geocode your data and extract the latitude and longitude information and add it to your data. while it&#39;s true that some applications will directly and automatically geocode your city, country or postal code data, it is rare to find a free tool that will geocode limitless amount of street address information. Most will only do a limited number of street addresses.
 
 You can either use:
 
@@ -648,8 +603,22 @@ You can either use:
 
 2. [[Desktop Tools|DesktopGeocoding]]. Desktop tools can be used to geocode more than a few thousand points.
 </tw-passagedata>
-<tw-passagedata pid="18" name="CartoDB" tags="" position="1043,753">CartoDB is an online mapping tool that allows users to easily map and analyze data for free. There is both a free and paid version of this product, the paid versions offering addtional privacy features and more data storage. For our purposes, the free version will sufice.
+<tw-passagedata pid="17" name="CartoDB" tags="" position="1095,756">CartoDB is an online mapping tool that allows users to easily map and analyze data for free. There is both a free and paid version of this product, the paid versions offering addtional privacy features and more data storage. For our purposes, the free version will sufice.
+&lt;&lt;if visited(&quot;GeoreferenceMW&quot;)&gt;&gt;
 
+1. Go to &lt;a href=&quot;https://cartodb.com/&quot; target=&quot;_blank&quot;&gt;CartoDB&lt;/a&gt; and login in/create a free account.
+[img[images/Cartodb1.png]]
+
+2. Click on &quot;Maps&quot; and then on the &quot;New Map&quot; Button to create a new map. In the following dialog, click on &quot;Create empty map&quot;. Skip the following step.
+
+3. At the bottom left of the screen, click on &quot;Change basemap&quot; and click on the &quot;+&quot; next to yours. This will allow you to add your newly georeferenced image from MapWarper.
+[img[images/Cartodb9.png]]
+
+4. Return to MapWaper and copy and paste the link next to &quot;Tiles (Google/OSM scheme):&quot;. This text looks like this. http://mapwarper.net/maps/tile/13395/{z}/{x}/{y}.png 
+Copy and paste this in CartoDB and click Ok. The georeferenced image will now be CartoDB.
+
+5. To export or share your map, click on Visualize button at the top right in CartoDB. You&#39;ll be asked to confirm to create the map. Here, users have the option of adding various map elements such as title, annotations or an item. You can also preview the map and see how it will look at a mobile version vs a desktop computer as well as export a static image of the map.  Lastly and most importantly, users can share the map by providing a link or embedding it in their own websites. Users also have the option of developing their own cartodb.js application. Click on Publish at the top right and select the link to be able to share it with our friends.
+&lt;&lt;else&gt;&gt;
 The data that we&#39;ll use for this exercise can be &lt;a href=&quot;https://github.com/joelrivard/dh-final/blob/gh-pages/images/federal_heritage_designation_city.csv&quot; target=&quot;_blank&quot;&gt;downloaded from here&lt;/a&gt;
 
 1. Go to &lt;a href=&quot;https://cartodb.com/&quot; target=&quot;_blank&quot;&gt;CartoDB&lt;/a&gt; and login in/create a free account.
@@ -680,9 +649,9 @@ The data that we&#39;ll use for this exercise can be &lt;a href=&quot;https://gi
 10. To export or share your map, click on Visualize button at the top right in CartoDB. You&#39;ll be asked to confirm to create the map. Here, users have the option of adding various map elements such as title, annotations or an item. You can also preview the map and see how it will look at a mobile version vs a desktop computer as well as export a static image of the map.  Lastly and most importantly, users can share the map by providing a link or embedding it in their own websites. Users also have the option of developing their own cartodb.js application. Click on Publish at the top right and select the link to be able to share it with our friends. The map below shows the map that has been embeded in this tutorial.
 
 &lt;iframe width=&quot;100%&quot; height=&quot;520&quot; frameborder=&quot;0&quot; src=&quot;https://geojoel.cartodb.com/viz/cef750b6-f76c-11e5-9cdb-0ea31932ec1d/embed_map&quot; allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen&gt;&lt;/iframe&gt;
-
+&lt;&lt;endif&gt;&gt;
 [[Are you more than happy with ending here?|TomlinsonEnd]]! </tw-passagedata>
-<tw-passagedata pid="19" name="OnlineGeocoding" tags="" position="885,603">&lt;h3&gt;Geocoding with GPS Visualizer&lt;/h3&gt;
+<tw-passagedata pid="18" name="OnlineGeocoding" tags="" position="885,603">&lt;h3&gt;Geocoding with GPS Visualizer&lt;/h3&gt;
 GPS Visualizer is an online utility that allows users to geocode tabular geographic data data. Geocoding is the process of converting street addresses or other locations to latitude and longitude. GPS Visualizer offers several options for geocoding your information. It is free and easy to use, yet powerful and extremely customizable.
 
 To geocode, you will be required to use one of the following APIs.
@@ -728,31 +697,63 @@ Users that need to geocode data at the address level (1125 colonel by drive) can
 
 Once you&#39;ve obtained the latitude and longitude, go back to [[CartoDB]] to visualize your data.
 </tw-passagedata>
-<tw-passagedata pid="20" name="DesktopGeocoding" tags="" position="1041,604">&lt;h3&gt;Geocoding with QGIS&lt;/h3&gt;
+<tw-passagedata pid="19" name="DesktopGeocoding" tags="" position="1041,604">&lt;h3&gt;Geocoding with QGIS&lt;/h3&gt;
+QGIS is an open source Geographic Information System (GIS) which allows users to create, manipulate and display geographic data. Click here to &lt;a href=&quot;http://www.qgis.org/en/site/&quot; target=&quot;_blank&quot;&gt;download the latest QGIS on either Windows or Apple&lt;/a&gt; We&#39;ll be using QGIS to geocode when you have over a few thousand points to geocode. To geocode, you will be required to use one of the following APIs:
 
-QGIS desktop is a desktop solution to geocoding when you have over a few thousand points to geocode. To geocode, you will be required to use one of the following APIs:
+1. &lt;a href=&quot;https://developers.google.com/maps/&quot; target=&quot;_blank&quot;&gt;Visit Google Maps API&lt;/a&gt; 
+2. &lt;a href=&quot;http://open.mapquestapi.com/geocoding/&quot; target=&quot;_blank&quot;&gt;MapQuest Open API&lt;/a&gt;
 
-1. &lt;a href=&quot;https://msdn.microsoft.com/en-us/library/ff701713.aspx&quot; target=&quot;_blank&quot;&gt;Bing Maps API&lt;/a&gt; 
-2. &lt;a href=&quot;https://developers.google.com/maps/&quot; target=&quot;_blank&quot;&gt;Visit Google Maps API&lt;/a&gt; 
-3. &lt;a href=&quot;http://open.mapquestapi.com/geocoding/&quot; target=&quot;_blank&quot;&gt;MapQuest Open API&lt;/a&gt;
+1. The geocoding in QGIS will be done by using the MMQGIS plugin. In QGIS, click on Plugins &gt; Manage and Install Plug-ins. Scroll down and click on mmqgis and click on install.
+[img[images/geocoding1.png]]
 
-Follow these instructions to get this done.
-https://www.gislounge.com/how-to-geocode-addresses-using-qgis/
+2. Once it&#39;s installed, in the menu, click on MMQGIS &gt; Geocode &gt; Geocode CSV with Google/OpenStreetMap.
+[img[images/geocoding2.png]]
 
-Here, I&#39;ll also add the method of downloading a street file to geocode using QGIS.
+3. The geographic information in your csv file needs to be formatted in the following way:
+	a. Address: 1225 Colonel By drive
+	b. City: Ottawa
+	c. Province: Ontario
+	d. Country: Canada
+You must also ensure that there are no spelling mistakes, special characters (ie.$, %)
+[img[images/geocoding4.png]]
 
-Once we&#39;re done and still want to display our lat/long data, go to [[CartoDB]]</tw-passagedata>
-<tw-passagedata pid="21" name="TommyEnd" tags="" position="196,457">&lt;&lt;if visited(&quot;FindMaps&quot;)&gt;&gt;
+4. In the dialog box, match up your corresponding fields. The field name in your csv file can be whatever you want, just as long as it contains the specific geographic information for &quot;Address Field&quot;, &quot;City Field&quot;, &quot;State Field&quot; and &quot;Country Field&quot;. Select Google Maps or OpenStreetMap as the WebService. Google Maps can do abuot 2,500 records per day while OpenStreetMap has not limits.
+[img[images/geocoding3.png]]
+
+5. Once the geocoding is done, it will create a new shapefile, as well as a csv file with addresses that weren&#39;t found. Open the csv file and fix up the geographic fields to ensure that these can be properly be geocoded. Sometimes the spelling of the street or city could be different (or different language). Once you&#39;re ready, re-run the geocoding.
+
+6. When you have a finished shapefile, you&#39;ll notice that the attribute table does not contain the longitude and latitude coordinates. We&#39;ll have to calculate these using QGIS&#39;s field calculator.
+
+7. Open the attribute table, and select the icon to right in the attribute table.
+[img[images/geocoding5.png]]
+
+8. Fill in the following information to create a new field and calculate the coordinates. The following two screenshots illustrate the calculation of the x and y coordinates.
+[img[images/geocoding6.png]]
+[img[images/geocoding7.png]]
+
+
+If you&#39;re done and still want to display our lat/long data on the web, go to [[CartoDB]]</tw-passagedata>
+<tw-passagedata pid="20" name="TommyEnd" tags="" position="196,457">&lt;&lt;if visited(&quot;FindMaps&quot;)&gt;&gt;
 Congratulations!
 You&#39;ve complete the Tommy Thompson stage! You&#39;ve earned 10 points! If you&#39;d like to get more points, try [[putting a digital map online|OnlineMap]]
 &lt;&lt;endif&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="22" name="MercatorEnd" tags="" position="759,705">Congratulations!
-You&#39;ve complete the Gerard Mercator stage! You&#39;ve earned 20 points! If you&#39;d like to get more points, try [[using data to make a digital map online|DataMap]]</tw-passagedata>
-<tw-passagedata pid="23" name="TomlinsonEnd" tags="" position="1044,903">Congratulations!
-You&#39;ve complete the Roger Tomlinson stage!
-You&#39;ve earned 30 points!
+<tw-passagedata pid="21" name="MercatorEnd" tags="" position="770,743">&lt;&lt;if visited(&quot;FindMaps&quot; and &quot;GeoreferenceMaps&quot;)&gt;&gt;
+You&#39;ve completed the Gerard Mercator stage! You&#39;ve earned 20 points! You&#39;ve learned to find a map and georeference it! If you&#39;d like to get more points, try [[using data to make a digital map online|DataMap]]
+&lt;&lt;elseif visited(&quot;FindMaps&quot; and &quot;Static Map&quot;)&gt;&gt;
+You&#39;ve completed the Gerard Mercator stage! You&#39;ve earned 15 points! You&#39;ve learned to find a map and put up a static map! If you&#39;d like to get more points, try [[using data to make a digital map online|DataMap]]
+&lt;&lt;elseif visited(&quot;FindMaps&quot; and &quot;Interactive Map&quot;)&gt;&gt;
+You&#39;ve completed the Gerard Mercator stage! You&#39;ve earned 15 points! You&#39;ve learned to find a map and put up an interactive map! If you&#39;d like to get more points, try [[using data to make a digital map online|DataMap]]
+&lt;&lt;endif&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="22" name="TomlinsonEnd" tags="" position="1044,903">&lt;&lt;if visited(&quot;MercatorEnd&quot; and &quot;Coordinates&quot; and &quot;GeographicElements&quot;)&gt;&gt;
+You&#39;ve completed the Roger Tomlinson stage! You&#39;ve earned 40 points! You&#39;ve learned how to georeference data, geocode data and map it online, some very fundamental elements of mapping! Take your newly learned skills to map world!
 
-This is the end of the game now!</tw-passagedata>
+&lt;&lt;elseif visited(&quot;Coordinates&quot; and &quot;GeographicElements&quot;)&gt;&gt;
+You&#39;ve completed the Roger Tomlinson stage! You&#39;ve earned 30 points! You&#39;ve learned how to geocode data and map it online! Take your newly learned skills to the map world!
+
+&lt;&lt;elseif visited(&quot;Coordinates&quot;)&gt;&gt;
+You&#39;ve completed the Roger Tomlinson stage! You&#39;ve earned 20 points! You&#39;ve learned how to map latitude and longitue data. Take your newly learned skills to the map world!
+&lt;&lt;endif&gt;&gt;
+</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
